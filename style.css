@@ -1,0 +1,183 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+### Neutral
+
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Inter', sans-serif;
+	letter-spacing: 0.1rem;
+}
+.main {
+	background-color: #090b1a;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.container {
+	background-color: #1b1938;
+	display: grid;
+	width: 85rem;
+	grid-template-columns: 1fr 1fr;
+	border-radius: 0.8rem;
+	margin: 13.1rem 6.4rem;
+}
+.text-box {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin: 5.2rem;
+}
+.title {
+	font-size: 2.4rem;
+	color: #ffffff;
+}
+.title-feature {
+	color: #aa5cdb;
+}
+.text {
+	color: #ffffffbf;
+	line-height: 1.5;
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+.stats {
+	list-style: none;
+	display: flex;
+	gap: 3.2rem;
+	justify-content: flex-start;
+	margin-top: 4.8rem;
+}
+.stat-number {
+	color: #ffffff;
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+.stat-text {
+	text-transform: uppercase;
+	color: #ffffff99;
+	font-size: 1rem;
+	margin-top: 0.8rem;
+}
+.img-box {
+	overflow: hidden;
+	border-top-right-radius: 0.8rem;
+	border-bottom-right-radius: 0.8rem;
+}
+.img {
+	background-image: linear-gradient(to right, #aa5cdb, #aa5cdb);
+	display: flex;
+}
+.girls {
+	width: 100%;
+	opacity: 0.4;
+}
+@media (max-width: 41em) {
+	.container {
+		grid-template-columns: 1fr;
+		margin: 6.4rem 4.8rem;
+	}
+	.img-box {
+		grid-row: 1;
+		border-bottom-right-radius: 0;
+		border-top-left-radius: 0.8rem;
+	}
+}
+/* MODAL COMPONENT AND HOW IT WORKS, BELOW */
+.attribution {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+	background-color: #fff;
+}
+.attribution a:link,
+.attribution a:visited {
+	color: #000;
+	font-weight: 700;
+	text-decoration: none;
+}
+.hendrick-info {
+	position: relative;
+	padding: 4.8rem;
+}
+.hendrick-details {
+	display: flex;
+	flex-direction: column;
+	gap: 1.8rem;
+}
+.socials {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+.social {
+	font-size: 1.8rem;
+}
+.close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translate(-50%, 50%);
+	background-color: transparent;
+	border: none;
+	font-size: 2.4rem;
+	cursor: pointer;
+	outline: none;
+}
+.close:focus {
+	box-shadow: 0 0 0 0.05rem #000;
+}
+.blur {
+	filter: blur(0.5rem);
+	pointer-events: none;
+}
+.opacity-medium {
+	opacity: 0.5;
+}
+.opacity-min {
+	opacity: 1;
+}

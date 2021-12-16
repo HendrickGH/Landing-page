@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Stats preview card component</title>
+		<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main class="main blur">
+			<div class="container">
+				<div class="text-box">
+					<h1 class="title">
+						Get <span class="title-feature">insights</span> that help your
+						business grow
+					</h1>
+					<p class="text">
+						Discover the benefits of data analytics and make better decisions
+						regarding revenue, customer experience, and overall efficiency.
+					</p>
+					<ul class="stats">
+						<li class="stat">
+							<p class="stat-number">10k+</p>
+							<p class="stat-text">Companies</p>
+						</li>
+						<li class="stat">
+							<p class="stat-number">314</p>
+							<p class="stat-text">Templates</p>
+						</li>
+						<li class="stat">
+							<p class="stat-number">12M+</p>
+							<p class="stat-text">Queries</p>
+						</li>
+					</ul>
+				</div>
+				<div class="img-box">
+					<figure class="img">
+						<img
+							src="images/image-header-desktop.jpg"
+							alt="Women making money"
+							class="girls"
+						/>
+					</figure>
+				</div>
+			</div>
+		</main>
+		<div class="attribution">
+			<div class="hendrick-info">
+				<button class="close">
+					<ion-icon name="close"></ion-icon>
+				</button>
+				<div class="hendrick-details">
+					<p>
+						Challenge by
+						<a
+							href="https://www.frontendmentor.io?ref=challenge"
+							target="_blank"
+						>
+							Frontend Mentor
+						</a>
+					</p>
+					<p class="hendrick">
+						Coded by
+						<a href="https://www.linkedin.com/in/hendrick-galarza/"
+							>Hendrick GH</a
+						>
+					</p>
+					<ul class="socials">
+						<li class="social">
+							<a href="https://github.com/HendrickGH"
+								><ion-icon name="logo-github"></ion-icon
+							></a>
+						</li>
+						<li class="social">
+							<a href="https://twitter.com/HendrickGalarza"
+								><ion-icon name="logo-twitter"></ion-icon
+							></a>
+						</li>
+						<li class="social">
+							<a href="tel:7721698485"><ion-icon name="call"></ion-icon></a>
+						</li>
+						<li class="social">
+							<a href="https://hendrickgh.netlify.app/"
+								><ion-icon name="globe"></ion-icon
+							></a>
+						</li>
+						<li class="social">
+							<a href="Currículum.pdf" download="cv-hendrick"
+								><ion-icon name="attach"></ion-icon
+							></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script>
+			const showContent = document.querySelector('.blur');
+			const btnClose = document.querySelector('.close');
+			const deleteModal = () => {
+				showContent.classList.remove('blur');
+				btnClose.parentElement.parentElement.remove();
+			};
+			btnClose.addEventListener('click', deleteModal);
+		</script>
+	</body>
+</html>
